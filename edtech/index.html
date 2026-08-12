@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Authentication Check Script -->
+    <script>
+        // Redirect to login if not authenticated
+        (function() {
+            const user = localStorage.getItem('currentUser');
+            if (!user) {
+                window.location.href = 'login.html';
+            }
+        })();
+    </script>
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
         <div class="sidebar-header">
@@ -56,6 +66,20 @@
                 </a></li>
             </ul>
         </nav>
+
+        <!-- User Profile Section -->
+        <div class="sidebar-user-profile">
+            <div class="user-avatar">
+                <img src="https://i.pravatar.cc/60?img=5" alt="User">
+            </div>
+            <div class="user-info">
+                <p class="user-name" id="userName">User</p>
+                <p class="user-level" id="userLevel">Beginner</p>
+            </div>
+            <button class="btn-logout" id="logoutBtn" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
 
         <div class="sidebar-friends">
             <h3>Friends</h3>
