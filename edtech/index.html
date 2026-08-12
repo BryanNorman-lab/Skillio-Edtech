@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillio - Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Skillio</span>
+            </div>
+            <button class="sidebar-toggle mobile-only" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="my-class">
+                    <i class="fas fa-book"></i>
+                    <span>My Class</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="my-courses">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>My Courses</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="events">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="explore">
+                    <i class="fas fa-compass"></i>
+                    <span>Explore</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="reports">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reports</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="instructors">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <span>Instructors</span>
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-friends">
+            <h3>Friends</h3>
+            <div class="friend-item">
+                <img src="https://i.pravatar.cc/40?img=1" alt="Ava Lee">
+                <div class="friend-info">
+                    <p class="friend-name">Ava Lee</p>
+                    <p class="friend-points">25 Points</p>
+                </div>
+            </div>
+            <div class="friend-item">
+                <img src="https://i.pravatar.cc/40?img=2" alt="Noah Kim">
+                <div class="friend-info">
+                    <p class="friend-name">Noah Kim</p>
+                    <p class="friend-points">128 Points</p>
+                </div>
+            </div>
+            <div class="friend-item">
+                <img src="https://i.pravatar.cc/40?img=3" alt="Ethan Cruz">
+                <div class="friend-info">
+                    <p class="friend-name">Ethan Cruz</p>
+                    <p class="friend-points">45 Points</p>
+                </div>
+            </div>
+            <div class="friend-item">
+                <img src="https://i.pravatar.cc/40?img=4" alt="Maya Patel">
+                <div class="friend-info">
+                    <p class="friend-name">Maya Patel</p>
+                    <p class="friend-points">180 Points</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <button class="menu-toggle" id="openSidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">Skillio</div>
+            <div class="header-icons">
+                <i class="fas fa-bell"></i>
+                <img src="https://i.pravatar.cc/40?img=5" alt="Profile" class="profile-img">
+            </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Main Section -->
+            <section class="main-section">
+                <!-- Dashboard Section -->
+                <div class="section-content active" id="dashboard">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <input type="text" class="search-bar" placeholder="Search by topic, title, or name">
+                    </div>
+
+                    <!-- Premium Banner -->
+                    <div class="premium-banner">
+                        <div class="banner-content">
+                            <h2>Unlock 1,000+ Premium Courses Today</h2>
+                            <p>Learn from industry experts with exclusive content designed to boost your skills.</p>
+                            <button class="btn-premium">Go Premium <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="banner-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+
+                    <!-- Stats Section -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon courses">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="stat-content">
+                                <p class="stat-value">05/08</p>
+                                <p class="stat-label">Complete</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon points">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-content">
+                                <p class="stat-value">80/100</p>
+                                <p class="stat-label">Points</p>
+                            </div>
+                        </div>
+                        <div class="stat-card progress-card">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 120 120">
+                                    <circle cx="60" cy="60" r="54" class="progress-circle-bg"></circle>
+                                    <circle cx="60" cy="60" r="54" class="progress-circle"></circle>
+                                </svg>
+                                <div class="progress-text">75%</div>
+                            </div>
+                            <p class="stat-label">Progress</p>
+                        </div>
+                    </div>
+
+                    <!-- Continue Watching -->
+                    <div class="continue-watching">
+                        <div class="section-header">
+                            <h3>Continue Watching</h3>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="videos-grid">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=180&fit=crop" alt="UI & UX Mastery">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">12:45</div>
+                                </div>
+                                <h4>UI & UX Mastery: Design Your First App</h4>
+                                <p class="course-category">UI Design for Beginners</p>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=180&fit=crop" alt="Responsive Web Design">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">13:33</div>
+                                </div>
+                                <h4>Create Mobile-First Websites from Scratch</h4>
+                                <p class="course-category">Responsive Web Design</p>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=180&fit=crop" alt="Interactive Prototypes">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">11:33</div>
+                                </div>
+                                <h4>Build Interactive Prototypes Like a Pro</h4>
+                                <p class="course-category">Framer Essentials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Courses Section -->
+                <div class="section-content" id="my-courses">
+                    <h2>My Courses</h2>
+                    <p style="color: #999; margin-top: 20px;">Explore all the courses you're currently enrolled in.</p>
+                    <div class="videos-grid" style="margin-top: 30px;">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=180&fit=crop" alt="Course">
+                                <div class="play-button"><i class="fas fa-play"></i></div>
+                            </div>
+                            <h4>Web Development Fundamentals</h4>
+                            <p class="course-category">Beginner Course</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=180&fit=crop" alt="Course">
+                                <div class="play-button"><i class="fas fa-play"></i></div>
+                            </div>
+                            <h4>JavaScript Mastery</h4>
+                            <p class="course-category">Intermediate Course</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=180&fit=crop" alt="Course">
+                                <div class="play-button"><i class="fas fa-play"></i></div>
+                            </div>
+                            <h4>React Advanced Patterns</h4>
+                            <p class="course-category">Advanced Course</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Section -->
+                <div class="section-content" id="events">
+                    <h2>Events</h2>
+                    <p style="color: #999; margin-top: 20px;">Upcoming events and workshops for you.</p>
+                    <div class="events-list" style="margin-top: 30px;">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="date-day">22</span>
+                                <span class="date-month">Aug</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>UI Basics Quiz</h4>
+                                <p>6 quick MCQs on design</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="date-day">25</span>
+                                <span class="date-month">Aug</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Framer Homework</h4>
+                                <p>Make 3 interactive</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="date-day">28</span>
+                                <span class="date-month">Aug</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>CSS Live Code</h4>
+                                <p>Create interactive card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explore Section -->
+                <div class="section-content" id="explore">
+                    <h2>Explore</h2>
+                    <p style="color: #999; margin-top: 20px;">Discover new courses and learning paths.</p>
+                    <div class="explore-categories" style="margin-top: 30px;">
+                        <div class="category-card">
+                            <div class="category-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Web Development</h4>
+                            <p>125 Courses</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>UI/UX Design</h4>
+                            <p>98 Courses</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Mobile Development</h4>
+                            <p>76 Courses</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h4>Game Development</h4>
+                            <p>54 Courses</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Class Section -->
+                <div class="section-content" id="my-class">
+                    <h2>My Class</h2>
+                    <p style="color: #999; margin-top: 20px;">Your classroom materials and assignments.</p>
+                    <div class="class-materials" style="margin-top: 30px;">
+                        <div class="material-card">
+                            <i class="fas fa-file-pdf"></i>
+                            <h4>Lecture Notes - Week 1</h4>
+                            <p>PDF • 2.4 MB</p>
+                        </div>
+                        <div class="material-card">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <h4>Presentation - Module 2</h4>
+                            <p>PPT • 5.1 MB</p>
+                        </div>
+                        <div class="material-card">
+                            <i class="fas fa-file-word"></i>
+                            <h4>Assignment Template</h4>
+                            <p>DOC • 1.2 MB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Section -->
+                <div class="section-content" id="reports">
+                    <h2>Reports</h2>
+                    <p style="color: #999; margin-top: 20px;">Your learning progress and performance reports.</p>
+                    <div class="report-cards" style="margin-top: 30px;">
+                        <div class="report-card">
+                            <h4>Weekly Progress</h4>
+                            <p style="color: #666; font-size: 14px;">Your progress this week</p>
+                            <div style="margin-top: 10px; font-size: 24px; font-weight: bold; color: #667eea;">78%</div>
+                        </div>
+                        <div class="report-card">
+                            <h4>Course Completion</h4>
+                            <p style="color: #666; font-size: 14px;">Overall completion rate</p>
+                            <div style="margin-top: 10px; font-size: 24px; font-weight: bold; color: #667eea;">62%</div>
+                        </div>
+                        <div class="report-card">
+                            <h4>Quiz Performance</h4>
+                            <p style="color: #666; font-size: 14px;">Average quiz score</p>
+                            <div style="margin-top: 10px; font-size: 24px; font-weight: bold; color: #667eea;">85%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructors Section -->
+                <div class="section-content" id="instructors">
+                    <h2>Instructors</h2>
+                    <p style="color: #999; margin-top: 20px;">Connect with our expert instructors.</p>
+                    <div class="instructors-list" style="margin-top: 30px;">
+                        <div class="instructor-card">
+                            <img src="https://i.pravatar.cc/150?img=6" alt="Instructor">
+                            <h4>John Smith</h4>
+                            <p>Web Development Specialist</p>
+                            <button class="btn-small">Contact</button>
+                        </div>
+                        <div class="instructor-card">
+                            <img src="https://i.pravatar.cc/150?img=7" alt="Instructor">
+                            <h4>Sarah Johnson</h4>
+                            <p>UI/UX Design Expert</p>
+                            <button class="btn-small">Contact</button>
+                        </div>
+                        <div class="instructor-card">
+                            <img src="https://i.pravatar.cc/150?img=8" alt="Instructor">
+                            <h4>Mike Davis</h4>
+                            <p>JavaScript Guru</p>
+                            <button class="btn-small">Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div class="section-content" id="settings">
+                    <h2>Settings</h2>
+                    <p style="color: #999; margin-top: 20px;">Manage your account preferences.</p>
+                    <div class="settings-list" style="margin-top: 30px;">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Account Settings</h4>
+                                <p>Update your profile and personal information</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Notifications</h4>
+                                <p>Manage your notification preferences</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Privacy & Security</h4>
+                                <p>Manage your privacy and security settings</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Help & Support</h4>
+                                <p>Get help and contact support</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+                <!-- Events Widget -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h4>Events</h4>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="event-calendar">
+                        <div class="calendar-header">
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                        </div>
+                        <div class="calendar-dates">
+                            <span>21</span>
+                            <span class="active">22</span>
+                            <span>23</span>
+                            <span>24</span>
+                            <span>25</span>
+                        </div>
+                    </div>
+                    <div class="event-list">
+                        <div class="event-widget-item">
+                            <div class="event-icon quiz">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="event-widget-info">
+                                <p class="event-title">UI Basics Quiz</p>
+                                <p class="event-desc">6 quick MCQs on design</p>
+                            </div>
+                        </div>
+                        <div class="event-widget-item">
+                            <div class="event-icon homework">
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                            <div class="event-widget-info">
+                                <p class="event-title">Framer Homework</p>
+                                <p class="event-desc">Make 3 interactive</p>
+                            </div>
+                        </div>
+                        <div class="event-widget-item">
+                            <div class="event-icon code">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="event-widget-info">
+                                <p class="event-title">CSS Live Code</p>
+                                <p class="event-desc">Create interactive card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Quest Widget -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h4>Daily Quest</h4>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="quest-item">
+                        <div class="quest-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="quest-info">
+                            <h5>Log In 5 Days Straight</h5>
+                            <p class="quest-points">+8 Points</p>
+                            <div class="quest-progress">
+                                <div class="progress-bar" style="width: 60%;"></div>
+                            </div>
+                            <p class="progress-text">5/5 Completed</p>
+                        </div>
+                    </div>
+                    <div class="quest-item">
+                        <div class="quest-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="quest-info">
+                            <h5>Ace 3 Quiz Without Retry</h5>
+                            <p class="quest-points">+15 Points</p>
+                            <div class="quest-progress">
+                                <div class="progress-bar" style="width: 33%; background: #ccc;"></div>
+                            </div>
+                            <p class="progress-text">1/3 Completed</p>
+                        </div>
+                        <button class="btn-quest">Start Reward</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
