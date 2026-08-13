@@ -2420,3 +2420,46 @@ if (document.readyState === 'loading') {
 } else {
     initializeNewFeatures();
 }
+
+// MY CLASS SECTION - TAB FUNCTIONALITY
+// ===========================
+const classTabBtns = document.querySelectorAll('.class-tab-btn');
+const classTabContents = document.querySelectorAll('.class-tab-content');
+
+classTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tabName = btn.getAttribute('data-tab');
+
+        // Remove active class from all buttons and contents
+        classTabBtns.forEach(b => b.classList.remove('active'));
+        classTabContents.forEach(content => content.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding content
+        btn.classList.add('active');
+        const activeContent = document.querySelector(`.class-tab-content[data-tab="${tabName}"]`);
+        if (activeContent) {
+            activeContent.classList.add('active');
+        }
+
+        // Save active tab to localStorage
+        localStorage.setItem('activeClassTab', tabName);
+    });
+});
+
+// Restore active tab on page load
+function restoreClassTab() {
+    const savedTab = localStorage.getItem('activeClassTab') || 'schedule';
+    const tabBtn = document.querySelector(`.class-tab-btn[data-tab="${savedTab}"]`);
+    if (tabBtn) {
+        tabBtn.click();
+    }
+}
+
+// Call restore function when page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', restoreClassTab);
+} else {
+    restoreClassTab();
+}
+
+
