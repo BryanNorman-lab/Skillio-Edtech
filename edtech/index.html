@@ -433,28 +433,412 @@
 
                 <!-- My Class Section -->
                 <div class="section-content" id="my-class">
-                    <div class="section-header-row">
-                        <h2>My Class</h2>
+                    <h2>My Class</h2>
+                    <p style="color: #999; margin-top: 20px;">Your classroom hub with schedules, assignments, and materials.</p>
+                    
+                    <!-- Class Tabs -->
+                    <div class="class-tabs" style="margin-top: 30px;">
+                        <button class="class-tab-btn active" data-tab="schedule">
+                            <i class="fas fa-calendar-alt"></i> Schedule
+                        </button>
+                        <button class="class-tab-btn" data-tab="announcements">
+                            <i class="fas fa-bullhorn"></i> Announcements
+                        </button>
+                        <button class="class-tab-btn" data-tab="assignments">
+                            <i class="fas fa-tasks"></i> Assignments
+                        </button>
+                        <button class="class-tab-btn" data-tab="attendance">
+                            <i class="fas fa-clipboard-list"></i> Attendance
+                        </button>
+                        <button class="class-tab-btn" data-tab="grades">
+                            <i class="fas fa-chart-line"></i> Grades
+                        </button>
+                        <button class="class-tab-btn" data-tab="materials">
+                            <i class="fas fa-folder"></i> Materials
+                        </button>
+                        <button class="class-tab-btn" data-tab="discussions">
+                            <i class="fas fa-comments"></i> Discussions
+                        </button>
                     </div>
-                    <p style="color: var(--text-secondary); margin-top: 10px;">Your classroom materials, assignments, and personal notes.</p>
 
-                    <div class="class-materials" style="margin-top: 20px;">
-                        <div class="material-card">
-                            <i class="fas fa-file-pdf"></i>
-                            <h4>Lecture Notes - Week 1</h4>
-                            <p>PDF • 2.4 MB</p>
-                        </div>
-                        <div class="material-card">
-                            <i class="fas fa-file-powerpoint"></i>
-                            <h4>Presentation - Module 2</h4>
-                            <p>PPT • 5.1 MB</p>
-                        </div>
-                        <div class="material-card">
-                            <i class="fas fa-file-word"></i>
-                            <h4>Assignment Template</h4>
-                            <p>DOC • 1.2 MB</p>
+                    <!-- Schedule Tab -->
+                    <div class="class-tab-content active" data-tab="schedule">
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-day">
+                                    <span class="day-name">Monday</span>
+                                    <span class="day-date">Aug 14</span>
+                                </div>
+                                <div class="schedule-details">
+                                    <h4>Web Development Basics</h4>
+                                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:30 AM</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Room A-201</p>
+                                    <span class="schedule-status upcoming">Upcoming</span>
+                                </div>
+                                <button class="btn-join">Join Class</button>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-day">
+                                    <span class="day-name">Wednesday</span>
+                                    <span class="day-date">Aug 16</span>
+                                </div>
+                                <div class="schedule-details">
+                                    <h4>JavaScript Essentials</h4>
+                                    <p><i class="fas fa-clock"></i> 2:00 PM - 3:30 PM</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Online - Room B-105</p>
+                                    <span class="schedule-status upcoming">Upcoming</span>
+                                </div>
+                                <button class="btn-join">Join Class</button>
+                            </div>
+                            <div class="schedule-item completed">
+                                <div class="schedule-day">
+                                    <span class="day-name">Friday</span>
+                                    <span class="day-date">Aug 11</span>
+                                </div>
+                                <div class="schedule-details">
+                                    <h4>CSS Advanced Techniques</h4>
+                                    <p><i class="fas fa-clock"></i> 11:00 AM - 12:30 PM</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Room C-301</p>
+                                    <span class="schedule-status completed">Completed</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Announcements Tab -->
+                    <div class="class-tab-content" data-tab="announcements">
+                        <div class="announcements-list">
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <h4>Important: Project Deadline Extended</h4>
+                                    <span class="announcement-date">Aug 12, 2024</span>
+                                </div>
+                                <p>Dear Students, The final project deadline has been extended to August 25. Please update your submission plans accordingly.</p>
+                                <div class="announcement-meta">
+                                    <span><i class="fas fa-user"></i> Prof. John Smith</span>
+                                    <span><i class="fas fa-eye"></i> 124 views</span>
+                                </div>
+                            </div>
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <h4>New Resources Available</h4>
+                                    <span class="announcement-date">Aug 10, 2024</span>
+                                </div>
+                                <p>Check out the new video tutorials on advanced JavaScript concepts in the Materials section. These will help you with the upcoming assignment.</p>
+                                <div class="announcement-meta">
+                                    <span><i class="fas fa-user"></i> Prof. Sarah Johnson</span>
+                                    <span><i class="fas fa-eye"></i> 89 views</span>
+                                </div>
+                            </div>
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <h4>Quiz Next Week</h4>
+                                    <span class="announcement-date">Aug 8, 2024</span>
+                                </div>
+                                <p>A comprehensive quiz covering weeks 1-4 will be held next Wednesday. Please review all lecture notes and practice problems.</p>
+                                <div class="announcement-meta">
+                                    <span><i class="fas fa-user"></i> Prof. Mike Davis</span>
+                                    <span><i class="fas fa-eye"></i> 156 views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Assignments Tab -->
+                    <div class="class-tab-content" data-tab="assignments">
+                        <div class="assignments-list">
+                            <div class="assignment-card">
+                                <div class="assignment-header">
+                                    <div class="assignment-title">
+                                        <h4>Assignment 1: HTML Project</h4>
+                                        <span class="assignment-points">20 Points</span>
+                                    </div>
+                                    <span class="assignment-status submitted">Submitted</span>
+                                </div>
+                                <p class="assignment-description">Create a responsive HTML webpage with semantic markup and proper structure.</p>
+                                <div class="assignment-info">
+                                    <span><i class="fas fa-calendar"></i> Due: Aug 15</span>
+                                    <span><i class="fas fa-check-circle"></i> Submitted: Aug 14</span>
+                                    <span class="grade-badge">Score: 18/20</span>
+                                </div>
+                                <button class="btn-view-feedback">View Feedback</button>
+                            </div>
+                            <div class="assignment-card">
+                                <div class="assignment-header">
+                                    <div class="assignment-title">
+                                        <h4>Assignment 2: CSS Styling</h4>
+                                        <span class="assignment-points">25 Points</span>
+                                    </div>
+                                    <span class="assignment-status pending">Pending</span>
+                                </div>
+                                <p class="assignment-description">Apply advanced CSS techniques including flexbox, grid, and animations to create a modern design.</p>
+                                <div class="assignment-info">
+                                    <span><i class="fas fa-calendar"></i> Due: Aug 20</span>
+                                    <span class="time-remaining">⏱️ 8 days remaining</span>
+                                </div>
+                                <button class="btn-submit">Submit Assignment</button>
+                            </div>
+                            <div class="assignment-card">
+                                <div class="assignment-header">
+                                    <div class="assignment-title">
+                                        <h4>Assignment 3: JavaScript Logic</h4>
+                                        <span class="assignment-points">30 Points</span>
+                                    </div>
+                                    <span class="assignment-status pending">Pending</span>
+                                </div>
+                                <p class="assignment-description">Implement interactive features using JavaScript and DOM manipulation.</p>
+                                <div class="assignment-info">
+                                    <span><i class="fas fa-calendar"></i> Due: Aug 25</span>
+                                    <span class="time-remaining">⏱️ 13 days remaining</span>
+                                </div>
+                                <button class="btn-submit">Submit Assignment</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attendance Tab -->
+                    <div class="class-tab-content" data-tab="attendance">
+                        <div class="attendance-summary">
+                            <div class="attendance-stat">
+                                <div class="stat-number">15/18</div>
+                                <div class="stat-label">Classes Attended</div>
+                            </div>
+                            <div class="attendance-stat">
+                                <div class="stat-number">83%</div>
+                                <div class="stat-label">Attendance Rate</div>
+                            </div>
+                            <div class="attendance-stat">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Absences</div>
+                            </div>
+                            <div class="attendance-stat">
+                                <div class="stat-number">1</div>
+                                <div class="stat-label">Late Arrivals</div>
+                            </div>
+                        </div>
+                        <div class="attendance-list" style="margin-top: 30px;">
+                            <div class="attendance-item">
+                                <span class="attendance-date">Aug 12</span>
+                                <span class="attendance-status present">Present</span>
+                            </div>
+                            <div class="attendance-item">
+                                <span class="attendance-date">Aug 11</span>
+                                <span class="attendance-status present">Present</span>
+                            </div>
+                            <div class="attendance-item">
+                                <span class="attendance-date">Aug 10</span>
+                                <span class="attendance-status absent">Absent</span>
+                            </div>
+                            <div class="attendance-item">
+                                <span class="attendance-date">Aug 9</span>
+                                <span class="attendance-status present">Present</span>
+                            </div>
+                            <div class="attendance-item">
+                                <span class="attendance-date">Aug 8</span>
+                                <span class="attendance-status late">Late</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grades Tab -->
+                    <div class="class-tab-content" data-tab="grades">
+                        <div class="grades-overview">
+                            <div class="grades-card">
+                                <h4>Overall Class Grade</h4>
+                                <div class="grades-score">A-</div>
+                                <p style="color: #999; font-size: 12px; margin-top: 8px;">Based on 3 assessments</p>
+                            </div>
+                            <div class="grades-card">
+                                <h4>Current Average</h4>
+                                <div class="grades-score">87%</div>
+                                <p style="color: #999; font-size: 12px; margin-top: 8px;">Excellent performance</p>
+                            </div>
+                        </div>
+                        <div class="grades-breakdown" style="margin-top: 30px;">
+                            <h4 style="margin-bottom: 20px;">Grade Breakdown</h4>
+                            <div class="grade-item">
+                                <div class="grade-name">
+                                    <span>Participation</span>
+                                    <span class="grade-value">92%</span>
+                                </div>
+                                <div class="grade-bar">
+                                    <div class="grade-fill" style="width: 92%;"></div>
+                                </div>
+                            </div>
+                            <div class="grade-item">
+                                <div class="grade-name">
+                                    <span>Assignments</span>
+                                    <span class="grade-value">88%</span>
+                                </div>
+                                <div class="grade-bar">
+                                    <div class="grade-fill" style="width: 88%;"></div>
+                                </div>
+                            </div>
+                            <div class="grade-item">
+                                <div class="grade-name">
+                                    <span>Quizzes</span>
+                                    <span class="grade-value">85%</span>
+                                </div>
+                                <div class="grade-bar">
+                                    <div class="grade-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="grade-item">
+                                <div class="grade-name">
+                                    <span>Midterm Exam</span>
+                                    <span class="grade-value">82%</span>
+                                </div>
+                                <div class="grade-bar">
+                                    <div class="grade-fill" style="width: 82%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Materials Tab -->
+                    <div class="class-tab-content" data-tab="materials">
+                        <div class="materials-filter">
+                            <input type="text" class="materials-search" placeholder="Search materials...">
+                        </div>
+                        <div class="materials-by-week" style="margin-top: 20px;">
+                            <div class="week-section">
+                                <h4 class="week-title" data-week="1">
+                                    <i class="fas fa-chevron-down"></i> Week 1: Introduction
+                                </h4>
+                                <div class="week-materials" data-week="1">
+                                    <div class="material-card">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <div class="material-info">
+                                            <h5>Course Introduction</h5>
+                                            <p>PDF • 2.4 MB</p>
+                                        </div>
+                                        <button class="btn-download"><i class="fas fa-download"></i></button>
+                                    </div>
+                                    <div class="material-card video-card-link" data-youtube-url="https://youtu.be/it1rTvBcfRg?list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s">
+                                        <i class="fas fa-video"></i>
+                                        <div class="material-info">
+                                            <h5>Welcome Video</h5>
+                                            <p>Video • 1.2 MB</p>
+                                        </div>
+                                        <button class="btn-play" data-video-id="dQw4w9WgXcQ" data-video-title="Welcome Video"><i class="fas fa-play"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="week-section">
+                                <h4 class="week-title" data-week="2">
+                                    <i class="fas fa-chevron-down"></i> Week 2: HTML Fundamentals
+                                </h4>
+                                <div class="week-materials" data-week="2">
+                                    <div class="material-card">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <div class="material-info">
+                                            <h5>Lecture Notes - Week 2</h5>
+                                            <p>PDF • 3.1 MB</p>
+                                        </div>
+                                        <button class="btn-download"><i class="fas fa-download"></i></button>
+                                    </div>
+                                    <div class="material-card video-card-link" data-youtube-url="https://youtu.be/FQdaUv95mR8">
+                                        <i class="fas fa-video"></i>
+                                        <div class="material-info">
+                                            <h5>HTML Tutorial for Beginners</h5>
+                                            <p>Video • 12.5 MB</p>
+                                        </div>
+                                        <button class="btn-play" data-video-id="8m8jM5YsE0Y" data-video-title="HTML Tutorial for Beginners"><i class="fas fa-play"></i></button>
+                                    </div>
+                                    <div class="material-card">
+                                        <i class="fas fa-file-code"></i>
+                                        <div class="material-info">
+                                            <h5>Code Examples</h5>
+                                            <p>ZIP • 0.8 MB</p>
+                                        </div>
+                                        <button class="btn-download"><i class="fas fa-download"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="week-section">
+                                <h4 class="week-title" data-week="3">
+                                    <i class="fas fa-chevron-down"></i> Week 3: CSS Styling
+                                </h4>
+                                <div class="week-materials" data-week="3">
+                                    <div class="material-card">
+                                        <i class="fas fa-file-powerpoint"></i>
+                                        <div class="material-info">
+                                            <h5>Presentation - Module 3</h5>
+                                            <p>PPT • 5.1 MB</p>
+                                        </div>
+                                        <button class="btn-download"><i class="fas fa-download"></i></button>
+                                    </div>
+                                    <div class="material-card video-card-link" data-youtube-url="https://youtu.be/tfzGsCxutWk">
+                                        <i class="fas fa-video"></i>
+                                        <div class="material-info">
+                                            <h5>Advanced CSS Techniques</h5>
+                                            <p>Video • 8.7 MB</p>
+                                        </div>
+                                        <button class="btn-play" data-video-id="7gCRMC6nLvU" data-video-title="Advanced CSS Techniques"><i class="fas fa-play"></i></button>
+                                    </div>
+                                    <div class="material-card">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <div class="material-info">
+                                            <h5>CSS Tips & Tricks</h5>
+                                            <p>PDF • 1.9 MB</p>
+                                        </div>
+                                        <button class="btn-download"><i class="fas fa-download"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discussions Tab -->
+                    <div class="class-tab-content" data-tab="discussions">
+                        <div class="discussions-header">
+                            <button class="btn-new-discussion">
+                                <i class="fas fa-plus"></i> Start New Discussion
+                            </button>
+                        </div>
+                        <div class="discussions-list" style="margin-top: 20px;">
+                            <div class="discussion-thread">
+                                <div class="discussion-header">
+                                    <h4>How to approach the HTML project?</h4>
+                                    <span class="discussion-replies">12 replies</span>
+                                </div>
+                                <p class="discussion-preview">I'm not sure how to structure my HTML project. Should I use semantic HTML5 tags or just regular divs? Any best practices?</p>
+                                <div class="discussion-meta">
+                                    <span><i class="fas fa-user"></i> You</span>
+                                    <span><i class="fas fa-clock"></i> Aug 10</span>
+                                    <span class="last-reply">Last reply: Aug 12</span>
+                                </div>
+                                <button class="btn-view-thread">View Thread</button>
+                            </div>
+                            <div class="discussion-thread">
+                                <div class="discussion-header">
+                                    <h4>CSS Grid vs Flexbox - When to use each?</h4>
+                                    <span class="discussion-replies">8 replies</span>
+                                </div>
+                                <p class="discussion-preview">What's the difference between CSS Grid and Flexbox? I'm confused about when to use one over the other in my projects.</p>
+                                <div class="discussion-meta">
+                                    <span><i class="fas fa-user"></i> Ava Lee</span>
+                                    <span><i class="fas fa-clock"></i> Aug 9</span>
+                                    <span class="last-reply">Last reply: Aug 11</span>
+                                </div>
+                                <button class="btn-view-thread">View Thread</button>
+                            </div>
+                            <div class="discussion-thread">
+                                <div class="discussion-header">
+                                    <h4>JavaScript async/await vs Promises</h4>
+                                    <span class="discussion-replies">15 replies</span>
+                                </div>
+                                <p class="discussion-preview">I understand promises but async/await is still confusing. Can someone break down how they work and when to use each one?</p>
+                                <div class="discussion-meta">
+                                    <span><i class="fas fa-user"></i> Noah Kim</span>
+                                    <span><i class="fas fa-clock"></i> Aug 8</span>
+                                    <span class="last-reply">Last reply: Aug 12</span>
+                                </div>
+                                <button class="btn-view-thread">View Thread</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                     <div class="notes-section" style="margin-top: 30px;">
                         <div class="notes-header">
