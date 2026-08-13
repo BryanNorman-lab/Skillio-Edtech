@@ -365,7 +365,7 @@ For issues or questions:
 ---
 
 **Built with ❤️ for learners everywhere**
-
+**By group 2 (Edtech)**
 **Happy Learning! 🚀**
 
-Version 2.0 | Last Updated: August 2025
+Version 2.0 | Last Updated: August 2026
