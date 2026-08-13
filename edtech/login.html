@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillio - Login & Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background gradient -->
+    <div class="background-gradient"></div>
+
+    <!-- Login Container -->
+    <div class="container">
+        <!-- Left Side - Login Form -->
+        <div class="form-container active" id="loginForm">
+            <div class="form-content">
+                <div class="logo-header">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h1>Skillio</h1>
+                </div>
+
+                <h2>Welcome Back Creative!</h2>
+                <p class="subtitle">We Are Happy To See You Again</p>
+
+                <div class="form-group">
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    <i class="fas fa-lock"></i>
+                    <button class="toggle-password" type="button">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" checked>
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button class="btn-primary" id="loginBtn">Login</button>
+
+                <div class="divider">OR</div>
+
+                <button class="btn-social apple">
+                    <i class="fab fa-apple"></i>
+                    Log in with Apple
+                </button>
+
+                <button class="btn-social google">
+                    <i class="fab fa-google"></i>
+                    Log in with Google
+                </button>
+
+                <div class="switch-form">
+                    Don't have an account? 
+                    <a href="#" onclick="switchForm('signup')">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Signup Form -->
+        <div class="form-container" id="signupForm">
+            <div class="form-content">
+                <div class="logo-header">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h1>Skillio</h1>
+                </div>
+
+                <h2>Create Account</h2>
+                <p class="subtitle">Join our creative learning community</p>
+
+                <!-- Profile Picture Upload -->
+                <div class="profile-upload">
+                    <div class="upload-preview">
+                        <img id="profilePreview" src="https://i.pravatar.cc/150?img=5" alt="Profile">
+                    </div>
+                    <label class="upload-btn">
+                        <i class="fas fa-camera"></i> Upload Photo
+                        <input type="file" id="profileImage" accept="image/*" style="display: none;">
+                    </label>
+                    <p class="upload-text">JPG, PNG or GIF (max. 5MB)</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="signupName" placeholder="Full Name" required>
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="signupPassword" placeholder="Create password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <button class="btn-primary" id="signupBtn">Create Account</button>
+
+                <div class="divider">OR</div>
+
+                <button class="btn-social apple">
+                    <i class="fab fa-apple"></i>
+                    Sign up with Apple
+                </button>
+
+                <button class="btn-social google">
+                    <i class="fab fa-google"></i>
+                    Sign up with Google
+                </button>
+
+                <div class="switch-form">
+                    Already have an account? 
+                    <a href="#" onclick="switchForm('login')">Sign In</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Background Image -->
+        <div class="image-container">
+            <div class="gradient-blob"></div>
+        </div>
+    </div>
+
+    <!-- Preference Quiz Modal -->
+    <div class="modal" id="preferenceModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>Let's Personalize Your Learning Journey</h2>
+                    <p>Tell us about your interests so we can recommend the best courses</p>
+                </div>
+
+                <form id="preferenceForm">
+                    <!-- Step 1: Courses -->
+                    <div class="quiz-step active" id="step1">
+                        <h3>What courses would you like to learn?</h3>
+                        <p class="step-subtitle">Select all that interest you</p>
+                        
+                        <div class="course-grid">
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="web-development">
+                                <div class="course-card">
+                                    <i class="fas fa-code"></i>
+                                    <span>Web Development</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="ui-ux-design">
+                                <div class="course-card">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>UI/UX Design</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="mobile-development">
+                                <div class="course-card">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Dev</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="game-development">
+                                <div class="course-card">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>Game Dev</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="graphic-design">
+                                <div class="course-card">
+                                    <i class="fas fa-image"></i>
+                                    <span>Graphic Design</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="digital-marketing">
+                                <div class="course-card">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Digital Marketing</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="video-production">
+                                <div class="course-card">
+                                    <i class="fas fa-video"></i>
+                                    <span>Video Production</span>
+                                </div>
+                            </label>
+                            <label class="course-option">
+                                <input type="checkbox" name="course" value="data-science">
+                                <div class="course-card">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Data Science</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <button type="button" class="btn-next" onclick="nextStep(2)">Next</button>
+                    </div>
+
+                    <!-- Step 2: Experience Level -->
+                    <div class="quiz-step" id="step2">
+                        <h3>What's your experience level?</h3>
+                        <p class="step-subtitle">This helps us recommend appropriate courses</p>
+                        
+                        <div class="experience-options">
+                            <label class="experience-card">
+                                <input type="radio" name="experience" value="beginner">
+                                <div class="card-content">
+                                    <h4>Beginner</h4>
+                                    <p>Just getting started</p>
+                                </div>
+                            </label>
+                            <label class="experience-card">
+                                <input type="radio" name="experience" value="intermediate">
+                                <div class="card-content">
+                                    <h4>Intermediate</h4>
+                                    <p>Some experience</p>
+                                </div>
+                            </label>
+                            <label class="experience-card">
+                                <input type="radio" name="experience" value="advanced">
+                                <div class="card-content">
+                                    <h4>Advanced</h4>
+                                    <p>Very experienced</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="quiz-buttons">
+                            <button type="button" class="btn-back" onclick="previousStep(1)">Back</button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Learning Goals -->
+                    <div class="quiz-step" id="step3">
+                        <h3>What are your learning goals?</h3>
+                        <p class="step-subtitle">Select your primary goal</p>
+                        
+                        <div class="goals-options">
+                            <label class="goal-card">
+                                <input type="radio" name="goal" value="skill-improvement">
+                                <div class="card-content">
+                                    <i class="fas fa-star"></i>
+                                    <h4>Skill Improvement</h4>
+                                    <p>Enhance existing skills</p>
+                                </div>
+                            </label>
+                            <label class="goal-card">
+                                <input type="radio" name="goal" value="career-change">
+                                <div class="card-content">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h4>Career Change</h4>
+                                    <p>Switch to a new field</p>
+                                </div>
+                            </label>
+                            <label class="goal-card">
+                                <input type="radio" name="goal" value="hobby">
+                                <div class="card-content">
+                                    <i class="fas fa-heart"></i>
+                                    <h4>Hobby & Fun</h4>
+                                    <p>Learn for enjoyment</p>
+                                </div>
+                            </label>
+                            <label class="goal-card">
+                                <input type="radio" name="goal" value="certification">
+                                <div class="card-content">
+                                    <i class="fas fa-certificate"></i>
+                                    <h4>Certification</h4>
+                                    <p>Get certified</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="quiz-buttons">
+                            <button type="button" class="btn-back" onclick="previousStep(2)">Back</button>
+                            <button type="button" class="btn-next" onclick="nextStep(4)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Time Commitment -->
+                    <div class="quiz-step" id="step4">
+                        <h3>How much time can you dedicate?</h3>
+                        <p class="step-subtitle">Per week, roughly</p>
+                        
+                        <div class="time-options">
+                            <label class="time-card">
+                                <input type="radio" name="time" value="1-5">
+                                <div class="card-content">
+                                    <h4>1-5 hours</h4>
+                                    <p>Light learner</p>
+                                </div>
+                            </label>
+                            <label class="time-card">
+                                <input type="radio" name="time" value="5-10">
+                                <div class="card-content">
+                                    <h4>5-10 hours</h4>
+                                    <p>Regular learner</p>
+                                </div>
+                            </label>
+                            <label class="time-card">
+                                <input type="radio" name="time" value="10-20">
+                                <div class="card-content">
+                                    <h4>10-20 hours</h4>
+                                    <p>Dedicated learner</p>
+                                </div>
+                            </label>
+                            <label class="time-card">
+                                <input type="radio" name="time" value="20+">
+                                <div class="card-content">
+                                    <h4>20+ hours</h4>
+                                    <p>Full-time learner</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="quiz-buttons">
+                            <button type="button" class="btn-back" onclick="previousStep(3)">Back</button>
+                            <button type="submit" class="btn-complete">Complete Setup</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
